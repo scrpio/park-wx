@@ -1,0 +1,50 @@
+.warp{
+  background-color: #f6f5fa;
+}
+.pay-info{
+  background-color: #fff;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.pay-icon{
+  margin-bottom: 8px;
+  display: block;
+  text-align: center;
+}
+.pay-status{
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #999999;
+  display: block;
+  text-align: center;
+}
+.pay-money{
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
+}
+.order-info{
+  background-color: #fff;
+}
+.info-item{
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 1px solid #f6f5fa;
+}
+.info-item:last-child{
+  border-bottom: none;
+}
+.item-label{
+  padding-left: 8px;
+  float: left;
+}
+.item-text{
+  padding-right: 8px;
+  float: right;
+  color: #999;
+}
+.btn-area{
+  padding: 30px 15px;
+}

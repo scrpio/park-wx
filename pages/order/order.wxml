@@ -1,0 +1,28 @@
+<view class='warp'>
+  <view class='order-item'>
+    <label class='order-label'>订单编号：</label>
+    <text>{{order.orderId}}</text>
+  </view>
+  <view class='order-item'>
+    <label class='order-label'>车 牌 号：</label>
+    <text>{{order.license}}</text>
+  </view>
+  <view class='order-item'>
+    <label class='order-label'>开始时间：</label>
+    <text>{{order.startTime}}</text>
+  </view>
+  <view class='order-time'>
+    <image src='../../image/timer.png'></image>
+    <view class='order-timer'>{{hours}}:{{minute}}:{{second}}</view>
+    <view class='order-duration'>停车计时</view>
+  </view>
+  <view class='park-info'>
+    <view class='park-title'>停车场信息</view>
+    <view class='park-content'>
+      <view class='park-text'>车库名称：{{garage.name}}</view>
+      <view class='park-text'>地址：{{garage.address}}</view>
+      <view class='park-text'>收费标准：{{garage.price}}元/小时</view>
+    </view>
+  </view>
+  <button type="primary" bindtap='goPayment'>取车</button>
+</view>

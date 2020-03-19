@@ -1,0 +1,40 @@
+<view class='warp'>
+  <view class='pay-info'>
+    <icon type="success" size="60" class='pay-icon'></icon>
+    <label class='pay-status'>支付成功</label>
+    <view class='pay-money'>¥{{order.amount}}</view>
+  </view>
+  <view class='order-info'>
+    <view class='info-item'>
+      <label class='item-label'>车牌号</label>
+      <text class='item-text'>{{order.license}}</text>
+    </view>
+    <view class='info-item'>
+      <label class='item-label'>停车场</label>
+      <text class='item-text'>{{order.garageName}}</text>
+    </view>
+    <view class='info-item'>
+      <label class='item-label'>开始时间</label>
+      <text class='item-text'>{{order.startTime}}</text>
+    </view>
+    <view class='info-item'>
+      <label class='item-label'>结束时间</label>
+      <text class='item-text'>{{order.endTime}}</text>
+    </view>
+    <view class='info-item'>
+      <label class='item-label'>收费标准</label>
+      <text class='item-text'>{{order.price}}元/小时</text>
+    </view>
+    <view class='info-item'>
+      <label class='item-label'>交易编号</label>
+      <text class='item-text'>{{order.orderId}}</text>
+    </view>
+    <view class='info-item'>
+      <label class='item-label'>支付方式</label>
+      <text class='item-text'>{{order.payType==0?'微信':'钱包'}}</text>
+    </view>
+  </view>
+  <view class='btn-area'>
+    <button type='primary' bindtap='goHome'>返回首页</button>
+  </view>
+</view>

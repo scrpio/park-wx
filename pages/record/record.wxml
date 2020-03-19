@@ -1,0 +1,45 @@
+<view class='page-section-gap'>
+  <view class="btn" bindtap="changeBtn">
+    <view class="{{currentIndex==2?'active':''}}" data-index="2" bindtap='getOrderList'>全部</view>
+    <view class="{{currentIndex==1?'active':''}}" data-index="1" bindtap='getOrderList'>已支付</view>
+    <view class="{{currentIndex==0?'active':''}}" data-index="0" bindtap='getOrderList'>未完成</view>
+  </view>
+  <view class='content'>
+    <scroll-view
+      scroll-y
+      style='height:{{scrollH}}px;'
+      scroll-into-view="{{toView}}"
+      scroll-top="{{scrollTop}}"
+      bindscroll="scroll"
+      bindscrolltoupper="upper"
+      bindscrolltolower="lower" wx:if='{{orderList.length>0}}'>
+      <view wx:for="{{orderList}}" wx:key="unique" class='order-list'>
+        <view class='list-top'>
+          <view class='item-title'>订单号：{{item.orderId}}</view>
+          <view class='item-detail' data-bean='{{item}}' bindtap='goDetail'>查看详情 ></view>
+        </view>
+        <view class='list-bottom'>
+          <view class='item-left'>
+            <view class='item-info'>
+              <image src='../../image/car.png'></image>
+              <text>{{item.garageName}}</text>
+            </view>
+            <view class='item-info'>
+              <image src='../../image/calendar.png'></image>
+              <text>{{item.startTime}}</text>
+            </view>
+            <view class='item-info'>
+              <image src='../../image/time.png'></image>
+              <text>{{item.duration}}小时</text>
+            </view>
+          </view>
+          <view hidden='{{item.status==0}}' class='item-status' style='color: red;'>已支付</view>
+          <view hidden='{{item.status==1}}' class='item-status' style='color: green;'>待付款</view>
+        </view>
+      </view>
+    </scroll-view>
+    <block wx:else>
+      <view style='text-align:center;padding-top:15px'>暂无数据</view>
+    </block>
+  </view>
+</view>

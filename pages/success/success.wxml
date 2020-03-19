@@ -1,0 +1,23 @@
+<view class='warp'>
+  <view class='pay-info'>
+    <icon type="success" size="60" class='pay-icon'></icon>
+    <label class='pay-status'>支付成功</label>
+  </view>
+  <view class='order-info'>
+    <view class='info-item'>
+      <label class='item-label'>交易编号</label>
+      <text class='item-text'>{{recharge.orderId}}</text>
+    </view>
+    <view class='info-item'>
+      <label class='item-label'>充值金额</label>
+      <text class='item-text'>¥{{recharge.money}}</text>
+    </view>
+    <view class='info-item'>
+      <label class='item-label'>交易时间</label>
+      <text class='item-text'>{{recharge.createTime}}</text>
+    </view>
+  </view>
+  <view class='btn-area'>
+    <button type='primary' bindtap='goHome'>返回首页</button>
+  </view>
+</view>

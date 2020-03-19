@@ -1,0 +1,48 @@
+.wrap{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.title-label{
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+.money-num{
+  display: inline-block;
+  width: 109px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin: 5px;
+  border: 1px solid #ff9900;
+  font-weight: 700;
+}
+.selectColor{
+  color: #fff;
+  background-color: #ff9900;
+}
+.unSelectColor{
+  color: #ff9900;
+  background-color: #fff;
+}
+.input-num{
+  height: 40px;
+  line-height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 10px 5px;
+  border-radius: 5px;
+  border: 1px solid #999;
+}
+.money-input{
+  height: 40px;
+  line-height: 40px;
+  float: left;
+}
+.money-label{
+  float: right;
+}
+.btn-area{
+  margin-top: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
