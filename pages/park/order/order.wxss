@@ -1,0 +1,56 @@
+.warp{
+  margin: 16rpx 40rpx;
+  font-size: 28rpx;
+}
+.order-item{
+  margin-bottom: 16rpx;
+}
+.order-label{
+  width: 172rpx;
+}
+.order-time{
+  text-align: center;
+  position: relative;
+  height: 494rpx;
+}
+.order-time image{
+  position: absolute;
+  left: 226rpx;
+  top: 100rpx;
+  width: 240rpx;
+  height: 240rpx;
+}
+.order-timer{
+  position: absolute;
+  left: 250rpx;
+  top: 196rpx;
+  width: 182rpx;
+  word-wrap: break-word;
+  font-size: 36rpx;
+}
+.order-duration{
+  position: absolute;
+  left: 145px;
+  top: 360rpx;
+  color: #666666;
+}
+.park-info{
+  margin-bottom: 40rpx;
+}
+.park-title{
+  color: #fff;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  background-color: rgb(174, 174, 174);
+}
+.park-content{
+  padding: 20rpx;
+  background-color: rgba(242, 242, 242, 1);
+}
+.park-text{
+  font-weight: 600;
+  font-family: 'Arial Negreta', 'Arial Normal', 'Arial';
+  font-style: normal;
+  margin-bottom: 16rpx;
+}

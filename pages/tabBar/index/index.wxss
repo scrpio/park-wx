@@ -1,0 +1,104 @@
+.banner{
+  display: flex;
+  width: 100%;
+}
+.banner-img{
+  width: 100%;
+  height: 360rpx;
+}
+.ad{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 30rpx;
+  background-color: #ccc;
+}
+.ad-text{
+  font-size: 28rpx;
+}
+.horn-img{
+  float: left;
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 18rpx;
+  margin-top: 18rpx;
+}
+.main{
+  display: flex;
+  width: 100%;
+  text-align: center;
+}
+.main-left{
+  width: 45%;
+  text-align: center;
+  padding-top:30rpx;
+  padding-bottom: 30rpx;
+  border-right: 2rpx solid #eee;
+}
+.main-right{
+  width: 55%;
+  text-align: left;
+}
+.enter-img{
+  width: 150rpx;
+  height: 140rpx;
+  margin: auto;
+  display: block;
+}
+.out-img{
+  width: 146rpx;
+  height: 112rpx;
+  position: absolute;
+  left: 180rpx;
+}
+.service-img{
+  width: 162rpx;
+  height: 70rpx;
+  position: absolute;
+  left: 180rpx;
+}
+.item-top{
+  position: relative;
+  padding:10rpx 30rpx;
+  height: 112rpx;
+  border-bottom: 2rpx solid #eee;
+}
+.item-bottom{
+  padding:30rpx;
+  height: 70rpx;
+  position: relative;
+}
+.item-top label{
+  position: absolute;
+  top: 54rpx;
+}
+.item-bottom label{
+  position: absolute;
+  top: 44rpx;
+}
+.company{
+  width: 100%;
+  border-top: 2rpx solid #eee;
+}
+.company-bar{
+  width: 100%;
+  height: 72rpx;
+  line-height: 72rpx;
+  padding-left: 20rpx;
+}
+.company-a{
+  float: right;
+  font-size: 24rpx;
+  color: #aaa;
+  padding-right: 20rpx;
+}
+.company-icon{
+  width: 10rpx;
+  height: 20rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+}
+.company-img{
+  width: 100%;
+  height: 333rpx;
+}

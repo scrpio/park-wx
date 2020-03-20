@@ -1,0 +1,76 @@
+{
+  "pages": [
+    "pages/tabBar/index/index",
+    "pages/tabBar/garage/garage",
+    "pages/tabBar/mine/mine",
+    "pages/logs/logs"
+  ],
+  "subpackages": [
+    {
+      "root": "pages/park",
+      "pages": [
+        "detail/detail",
+        "order/order",
+        "payment/payment"
+      ]
+    },
+    {
+      "root": "pages/center",
+      "pages": [
+        "profile/profile",
+        "recharge/recharge",
+        "bill-list/bill-list",
+        "order-list/order-list"
+      ]
+    },
+    {
+      "root": "pages/common",
+      "pages": [
+        "result/result"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "智能停车库",
+    "navigationBarTextStyle": "black"
+  },
+  "plugins": {
+    "routePlan": {
+      "version": "1.0.3",
+      "provider": "wx50b5593e81dd937a"
+    }
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "tabBar": {
+    "selectedColor": "#59A5F0",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/tabBar/index/index",
+        "text": "首页",
+        "iconPath": "image/home.png",
+        "selectedIconPath": "image/home2.png"
+      },
+      {
+        "pagePath": "pages/tabBar/garage/garage",
+        "text": "停车场",
+        "iconPath": "image/park.png",
+        "selectedIconPath": "image/park2.png"
+      },
+      {
+        "pagePath": "pages/tabBar/mine/mine",
+        "text": "我的",
+        "iconPath": "image/user.png",
+        "selectedIconPath": "image/user2.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

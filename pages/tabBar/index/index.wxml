@@ -1,0 +1,36 @@
+<view class="container">
+  <view class="banner">
+    <image src='../../../image/banner.png' class='banner-img'></image>
+  </view>
+  <view class="ad">
+    <image src='../../../image/horn.png' class='horn-img'></image>
+    <text class="ad-text">21世纪的停车神器</text>
+  </view>
+  <view class="main">
+    <view class='main-left'>
+      <view bindtap="goPark">
+        <image src='../../../image/enter.png' class='enter-img'></image>
+        <label>入场停车</label>
+      </view>
+    </view>
+    <view class='main-right'>
+      <view class='item-top' bindtap="getOrderByStatus">
+        <label>缴费出场</label>
+        <image src='../../../image/out.png' class='out-img'></image>
+      </view>
+      <view class='item-bottom'>
+        <label>一键客服</label>
+        <image src='../../../image/service.png' class='service-img'></image>
+      </view>
+    </view>
+  </view>
+  <view class='company'>
+    <view class='company-bar'>
+      <span>公司简介</span>
+      <a class='company-a'>
+        更多<image src='../../../image/more.png' class='company-icon'></image>
+      </a>
+    </view>
+    <image src='../../../image/mh.png' class='company-img'></image>
+  </view>
+</view>

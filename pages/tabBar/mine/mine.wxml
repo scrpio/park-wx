@@ -1,0 +1,73 @@
+<view class="container">
+  <view class="warp">
+    <button type='primary' wx:if="{{!hasUserInfo}}" open-type="getUserInfo" bindgetuserinfo="goRegister" class='register-btn'> 注册会员 </button>
+    <block wx:else>
+      <view class='card'>
+        <view>
+          <image src='{{userInfo.avatarUrl}}' class='userinfo-avatar'></image>
+          <view class='card-info'>
+            <view class='userinfo-nickname'>{{userInfo.nickname}}</view>
+            <view class='userinfo-license'>{{userInfo.license}}</view>
+          </view>
+          <view class='card-level'>{{userInfo.level==1?'黄金会员':userInfo.level==2?'铂金会员':userInfo.level==3?'钻石会员':'普通会员'}}</view>
+        </view>
+        <view class='card-property'>
+          <view class='list-item'>
+            <view>{{userInfo.balance}}</view>
+            <label class='bar-text'>余额</label>
+          </view>
+          <view class='list-item'>
+            <view>{{userInfo.points}}</view>
+            <label class='bar-text'>积分</label>
+          </view>
+          <view class='list-item'>
+            <view>0</view>
+            <label class='bar-text'>优惠券</label>
+          </view>
+        </view>
+      </view>
+      <view class='warp-list'>
+        <view class='list' bindtap='goRecharge'>
+          <a>
+            <span>充值</span>
+            <view class='item-right'>
+              <image src='../../../image/more.png' class='item-icon'></image>
+            </view>
+          </a>
+        </view>
+        <view class='list mb10'>
+          <a>
+            <span>账单明细</span>
+            <view class='item-right'>
+              <image src='../../../image/more.png' class='item-icon'></image>
+            </view>
+          </a>
+        </view>
+        <view class='list' bindtap="goProfile">
+          <a>
+            <span>个人中心</span>
+            <view class='item-right'>
+              <image src='../../../image/more.png' class='item-icon'></image>
+            </view>
+          </a>
+        </view>
+        <view class='list' bindtap="goOrderList">
+          <a>
+            <span>停车记录</span>
+            <view class='item-right'>
+              <image src='../../../image/more.png' class='item-icon'></image>
+            </view>
+          </a>
+        </view>
+        <view class='list'>
+          <a>
+            <span>联系客服</span>
+            <view class='item-right'>
+              <image src='../../../image/more.png' class='item-icon'></image>
+            </view>
+          </a>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

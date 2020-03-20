@@ -1,0 +1,48 @@
+.wrap{
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+.title-label{
+  margin-left: 10rpx;
+  margin-bottom: 20rpx;
+}
+.money-num{
+  display: inline-block;
+  width: 218rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  margin: 10rpx;
+  border: 2rpx solid #ff9900;
+  font-weight: 700;
+}
+.selectColor{
+  color: #fff;
+  background-color: #ff9900;
+}
+.unSelectColor{
+  color: #ff9900;
+  background-color: #fff;
+}
+.input-num{
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  margin: 20rpx 10rpx;
+  border-radius: 10rpx;
+  border: 2rpx solid #999;
+}
+.money-input{
+  height: 80rpx;
+  line-height: 80rpx;
+  float: left;
+}
+.money-label{
+  float: right;
+}
+.btn-area{
+  margin-top: 40rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}

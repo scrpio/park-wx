@@ -1,0 +1,100 @@
+.park-warp{
+  font-size: 28rpx;
+  height: 100vh;
+  background-color: #e4e4e4;
+}
+.park-banner{
+  display: flex;
+  width: 100%;
+}
+swiper{
+  height: 640rpx;
+  width: 100%;
+}
+.swiper-item{
+  height: 744rpx;
+  width: 100%;
+}
+.park-info{
+  padding-left: 16rpx;
+  padding-right: 50rpx;
+  background-color: #fff;
+}
+.info-title{
+  height: 80rpx;
+  padding-top: 16rpx;
+}
+.info-address{
+  height: 40rpx;
+  padding-top: 10rpx;
+  padding-bottom: 16rpx;
+}
+.park-title{
+  float: left;
+  font-size: 36rpx;
+  font-weight: 600;
+  padding-top: 20rpx;
+}
+.park-nav{
+  float: right;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 80rpx;
+  text-align: center;
+  background-color: #ff9900;
+}
+.park-nav image{
+  width: 48rpx;
+  height: 48rpx;
+  padding-top: 20rpx;
+}
+.park-address{
+  float: left;
+}
+.park-distance{
+  float: right;
+  color: #999;
+}
+.clear{
+  clear: both;
+}
+.park-car{
+  background-color: #fff;
+  border-top: 2rpx solid #e4e4e4;
+}
+.car-num{
+  display: inline-block;
+  text-align: center;
+  width: 49%;
+  border-right: 2rpx solid #e4e4e4;
+}
+.car-price{
+  display: inline-block;
+  text-align: center;
+  width: 50%;
+}
+.car-top{
+  padding-top: 16rpx;
+  padding-bottom: 10rpx;
+}
+.car-bottom{
+  color: #999;
+  padding-bottom: 16rpx;
+}
+.park-remark{
+  margin-top: 16rpx;
+  padding: 16rpx 20rpx;
+  background-color: #fff;
+}
+.remark-title{
+  color: #999;
+  padding-bottom: 10rpx;
+}
+.park-btn{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.park-btn button{
+  border-radius: 0;
+}

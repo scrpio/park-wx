@@ -1,0 +1,22 @@
+.pay-info{
+  background-color: #fff;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.pay-icon{
+  margin-bottom: 8px;
+  display: block;
+  text-align: center;
+}
+.pay-status{
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #999999;
+  display: block;
+  text-align: center;
+}
+.btn-area{
+  padding: 30px 15px;
+}
