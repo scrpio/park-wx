@@ -27,9 +27,15 @@
   float: right;
   color: #ca9311;
   margin-top: 60rpx;
-  padding: 10rpx 20rpx;
+  padding: 10rpx;
   border-radius: 40rpx 0 0 40rpx;
-  background-color: #fbf071;
+  background-color: #f4ea2a;
+}
+.card-level image{
+  float: left;
+  padding-right: 5rpx;
+  height: 42rpx;
+  width: 42rpx;
 }
 .userinfo-avatar {
   width: 128rpx;

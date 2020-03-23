@@ -78,6 +78,11 @@ Page({
       url: '../../center/recharge/recharge'
     })
   },
+  goBillList: function(e) {
+    wx.navigateTo({
+      url: '../../center/bill-list/bill-list'
+    })
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

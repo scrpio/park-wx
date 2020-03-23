@@ -1,0 +1,43 @@
+<view class='warp'>
+  <view class='order-info'>
+    <view class='info-title'>
+      <image src='../../../image/order.png' class='title-img'></image>
+      订单详情
+    </view>
+    <view class='info-item'>
+      <label class='item-label'>交易编号</label>
+      <text class='item-text'>{{order.orderId}}</text>
+    </view>
+    <view class='info-item'>
+      <label class='item-label'>车牌号</label>
+      <text class='item-text'>{{order.license}}</text>
+    </view>
+    <view class='info-item'>
+      <label class='item-label'>停车场</label>
+      <text class='item-text'>{{order.garageName}}</text>
+    </view>
+    <view class='info-item'>
+      <label class='item-label'>开始时间</label>
+      <text class='item-text'>{{order.startTime}}</text>
+    </view>
+    <view class='info-item'>
+      <label class='item-label'>结束时间</label>
+      <text class='item-text'>{{order.endTime}}</text>
+    </view>
+    <view class='info-item'>
+      <label class='item-label'>收费标准</label>
+      <text class='item-text'>{{order.price}}元/小时</text>
+    </view>
+    <view class='info-item'>
+      <label class='item-label'>实付金额</label>
+      <text class='item-text' style='color:red;'>¥{{order.amount}}</text>
+    </view>
+    <view class='info-item'>
+      <label class='item-label'>支付方式</label>
+      <text class='item-text'>{{order.payType==0?'微信':'钱包'}}</text>
+    </view>
+  </view>
+  <view class='btn-area'>
+    <button type='primary'>联系客服</button>
+  </view>
+</view>

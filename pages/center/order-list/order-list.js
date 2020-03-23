@@ -67,7 +67,7 @@ Page({
       })
     } else {
       wx.navigateTo({
-        url: '../../park/detail/detail?orderId=' + order.orderId
+        url: '../../common/order-detail/order-detail?orderId=' + order.orderId
       })
     }
   },

@@ -7,9 +7,15 @@ Page({
   data: {
     toView: 'a0',
     scrollTop: 0,
-    scrollH: 1142,
-    currentIndex: 2,
-    billList: null
+    scrollH: 1100,
+    selectText: '全部',
+    select: false,
+    dataList: null,
+    billList: null,
+    incomeList: null,
+    outlayList: null,
+    income: 0,
+    outlay: 0
   },
 
   /**
@@ -19,21 +25,57 @@ Page({
     var that = this
     var member = wx.getStorageSync('member')
     wx.request({
-      url: app.globalData.apiHost + '/api/orderList?memberId=' + member.id + '&type=' + 2,
+      url: app.globalData.apiHost + '/api/getBillList?memberId=' + member.id,
       success: function (res) {
         var list = res.data.data
-        for (var i = 0; list != null && i < list.length; i++) {
-          if (list[i].endTime == null) {
-            list[i].duration = that.getDuration(list[i].startTime, new Date())
+        var a = 0
+        var b = 0
+        var incomeList = []
+        var outlayList = []
+        for(var i = 0; i < list.length; i++){
+          if(list[i].money > 0){
+            a = list[i].money + a
+            incomeList.push(list[i])
           } else {
-            list[i].duration = that.getDuration(list[i].startTime, list[i].endTime)
+            b = list[i].money + b
+            outlayList.push(list[i])
           }
         }
         that.setData({
-          orderList: list
+          dataList: list,
+          billList: list,
+          incomeList: incomeList,
+          outlayList: outlayList,
+          income: a,
+          outlay: b
         })
       }
     })
+  },
+  bindShowMsg() {
+    this.setData({
+      select: !this.data.select
+    })
+  },
+  mySelect(e) {
+    var name = e.currentTarget.dataset.name
+    this.setData({
+      selectText: name,
+      select: false
+    })
+    if(name == '收入'){
+      this.setData({
+        dataList: this.data.incomeList
+      })
+    }else if(name == '支出'){
+      this.setData({
+        dataList: this.data.outlayList
+      })
+    } else{
+      this.setData({
+        dataList: this.data.billList
+      })
+    }
   },
   upper: function (e) { },
   lower: function (e) { },
@@ -52,51 +94,6 @@ Page({
     this.setData({
       scrollTop: this.data.scrollTop + 10
     })
-  },
-  changeBtn: function (ev) {//列表切换
-    this.setData({
-      currentIndex: ev.target.dataset.index
-    })
-  },
-  goDetail: function (e) {
-    var order = e.currentTarget.dataset.bean
-    if (order.status == 0) {
-      wx.navigateTo({
-        url: '../park/order/order?orderId=' + order.orderId + '&garageId=' + order.garageId
-      })
-    } else {
-      wx.navigateTo({
-        url: '../park/detail/detail?orderId=' + order.orderId
-      })
-    }
-  },
-  getOrderList: function (e) {
-    var that = this
-    var member = wx.getStorageSync('member')
-    wx.request({
-      url: app.globalData.apiHost + '/api/orderList?memberId=' + member.id + '&type=' + e.currentTarget.dataset.index,
-      success: function (res) {
-        var list = res.data.data
-        for (var i = 0; list != null && i < list.length; i++) {
-          if (list[i].endTime == null) {
-            list[i].duration = that.getDuration(list[i].startTime, new Date())
-          } else {
-            list[i].duration = that.getDuration(list[i].startTime, list[i].endTime)
-          }
-        }
-        that.setData({
-          orderList: list
-        })
-      }
-    })
-  },
-  getDuration: function (startTime, endTime) {
-    var stime = Date.parse(new Date(startTime))
-    var etime = Date.parse(new Date(endTime))
-    var millis = etime - stime //两个时间戳相差的毫秒数
-    var hours = millis / (1000 * 60 * 60)
-
-    return hours.toFixed(1)
   },
 
   /**

@@ -1,3 +1,4 @@
+<wxs module="filter" src="../../../utils/numberToFixed.wxs"></wxs>
 <view class='page-warp'>
   <view class="btn" bindtap="changeView">
     <view class="{{currentIndex==1?'active':''}}" data-index="1">地图</view>
@@ -40,7 +41,7 @@
         </view>
         <view class='item-right'>
           <view style='text-align: center;'>
-            <p class='item-p'>{{item.distance}}m</p>
+            <p class='item-p'>{{item.distance>1000?filter.numberToFixed(item.distance/1000)+'km':item.distance+'m'}}</p>
             <a class='item-a ml10' data-bean='{{item}}' bindtap='goDestination'>导航</a>
           </view>
           <button class='item-btn mt30' data-bean='{{item}}' bindtap='goDetail'>车库详情</button>

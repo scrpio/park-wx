@@ -9,7 +9,10 @@
             <view class='userinfo-nickname'>{{userInfo.nickname}}</view>
             <view class='userinfo-license'>{{userInfo.license}}</view>
           </view>
-          <view class='card-level'>{{userInfo.level==1?'黄金会员':userInfo.level==2?'铂金会员':userInfo.level==3?'钻石会员':'普通会员'}}</view>
+          <view class='card-level'>
+            <image src='../../../image/stars.png'></image>
+            <text>{{userInfo.level==1?'黄金会员':userInfo.level==2?'铂金会员':userInfo.level==3?'钻石会员':'普通会员'}}</text>
+          </view>
         </view>
         <view class='card-property'>
           <view class='list-item'>
@@ -35,7 +38,7 @@
             </view>
           </a>
         </view>
-        <view class='list mb10'>
+        <view class='list mb10' bindtap='goBillList'>
           <a>
             <span>账单明细</span>
             <view class='item-right'>
