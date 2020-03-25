@@ -22,7 +22,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.10.3",
-	"appid": "wx9409ae705604a646",
+	"appid": "",
 	"projectname": "park-wx",
 	"debugOptions": {
 		"hidedInDevtools": []

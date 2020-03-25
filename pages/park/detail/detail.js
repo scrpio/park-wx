@@ -94,7 +94,7 @@ Page({
   goDestination(e) {
     var item = e.currentTarget.dataset.bean
     let plugin = requirePlugin('routePlan');
-    let key = '73OBZ-CP4WW-ZXURW-RGDFJ-Q5ZYO-6YBWT';
+    let key = '';
     let referer = '立体停车库-客户端';
     let endPoint = JSON.stringify({
       'name': item.name,

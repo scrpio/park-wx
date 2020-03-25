@@ -64,7 +64,7 @@ Page({
       money = 1000
     }
     var orderInfo = {}
-    orderInfo.appid = 'wx9409ae705604a646'  // 小程序ID
+    orderInfo.appid = ''  // 小程序ID
     orderInfo.openid = openId  //用户标识
     orderInfo.mch_id = ''  // 商户号
     orderInfo.nonce_str = ''  // 随机字符串
